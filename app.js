@@ -47,6 +47,7 @@ const {
     const response = { statusCode: 200 };
     try {
       const body = JSON.parse(event.body);
+      const objKeys = Object.keys(body);
   
       // Validate the incoming data
       validatePostData(body);
@@ -74,7 +75,7 @@ const {
           )
         ),
       };
-      const createResult = await client.send(new PutItemCommand(params));
+      const createResult = await client.send(new UpdateItemCommand(params));
       response.body = JSON.stringify({
         message: 'Successfully created post.',
         createResult,
