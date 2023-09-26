@@ -1,8 +1,8 @@
-service: employee-portal 
+service: employee-portal-service 
 provider:
   name: aws
   runtime: nodejs18.x
-  stage: dev
+  stage: sit
   region: ap-south-1
   environment:
     DYNAMODB_TABLE_NAME: ${self:custom.employeeTableName}
