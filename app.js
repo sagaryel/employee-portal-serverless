@@ -98,6 +98,5 @@ const {
   // ... rest of your code ...
   
   module.exports = {
-    createEmpContact,
-    updatePost,
+    createEmpContact
   };
