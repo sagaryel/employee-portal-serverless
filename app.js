@@ -18,31 +18,26 @@ const {
   const validatePostData = (postData) => {
     if (
       !(
-        postData.empId &&
-        postData.name &&
-        postData.Address &&
-        postData.Phone &&
-        postData['personal email'] &&
-        postData['Emergency contact name'] &&
-        postData['Emergency Phone Number']
+        
+        postData.address &&
+        postData.phone &&
+        postData['personalEmail'] &&
+        postData['emergencyContactPersonName'] &&
+        postData['emergencyContactPersonPhone']
       )
     ) {
       throw new Error('Required fields are missing.');
     }
   
-    if (!phoneNumberRegex.test(postData.Phone)) {
+    if (!phoneNumberRegex.test(postData.phone)) {
       throw new Error('Invalid phone number.');
     }
   
-    if (!emailRegex.test(postData['personal email'])) {
+    if (!emailRegex.test(postData['personalEmail'])) {
       throw new Error('Invalid email address.');
     }
   
-    if (!nameRegex.test(postData.name)) {
-      throw new Error('Invalid name.');
-    }
-  
-    if (!addressRegex.test(postData.Address)) {
+    if (!addressRegex.test(postData.address)) {
       throw new Error('Invalid address.');
     }
   };
