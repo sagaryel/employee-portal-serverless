@@ -48,6 +48,7 @@ const {
   };
   
   const createEmpContact = async (event) => {
+    console.log("inside the add contact method");
     const response = { statusCode: 200 };
     try {
       const body = JSON.parse(event.body);
@@ -97,6 +98,6 @@ const {
   // ... rest of your code ...
   
   module.exports = {
-    createPost,
+    createEmpContact,
     updatePost,
   };
