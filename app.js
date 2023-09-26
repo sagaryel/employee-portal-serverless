@@ -18,8 +18,7 @@ const {
   const validatePostData = (postData) => {
     if (
       !(
-        postData.empId && 
-        postData.address &&
+        
         postData.phone &&
         postData['personalEmail'] &&
         postData['emergencyContactPersonName'] &&
