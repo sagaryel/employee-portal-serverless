@@ -53,7 +53,7 @@ const {
   
       const params = {
         TableName: process.env.DYNAMODB_TABLE_NAME,
-        Key: marshall({ empId: event.pathParameters.empId }),
+        Key: marshall({ employeeId: event.pathParameters.employeeId }),
         UpdateExpression: `SET ${objKeys
           .map((_, index) => `#key${index} = :value${index}`)
           .join(', ')}`,

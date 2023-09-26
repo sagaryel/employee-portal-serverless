@@ -18,7 +18,7 @@ functions:
     timeout: 5 # seconds
     events:
       - http:
-          path: employee/contact/{empId}
+          path: employee/contact/{employeeId}
           method: POST
     iamRoleStatements:
       - Effect: "Allow"
