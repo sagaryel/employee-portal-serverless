@@ -13,12 +13,12 @@ const {
   const phoneNumberRegex = /^\d{10}$/; // Matches 10-digit phone numbers
   const emailRegex = /^[A-Za-z0-9+_.-]+@(.+)$/; // Matches email addresses
   const nameRegex = /^[A-Za-z\s]+$/; // Matches names (only letters and spaces)
-  const addressRegex = /^[A-Za-z0-9\s]+$/; // Matches addresses (letters, numbers, and spaces)
+  //const addressRegex = /^[A-Za-z0-9\s]+$/; // Matches addresses (letters, numbers, and spaces)
   
   const validatePostData = (postData) => {
     if (
       !(
-        
+        postData.empId && 
         postData.address &&
         postData.phone &&
         postData['personalEmail'] &&
@@ -37,9 +37,9 @@ const {
       throw new Error('Invalid email address.');
     }
   
-    if (!addressRegex.test(postData.address)) {
-      throw new Error('Invalid address.');
-    }
+    // if (!addressRegex.test(postData.address)) {
+    //   throw new Error('Invalid address.');
+    // }
   };
   
   const createEmpContact = async (event) => {
