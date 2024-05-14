@@ -23,6 +23,3 @@ functions:
             parameters:
               querystrings:
                 employeeId: true
-
-plugins:
-  - serverless-plugin-postgres
