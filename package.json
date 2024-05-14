@@ -3,6 +3,8 @@
     "@aws-sdk/client-dynamodb": "^3.418.0",
     "@aws-sdk/util-dynamodb": "^3.418.0",
     "aws-sdk": "^2.1464.0",
+    "pg": "^8.11.5",
+    "sequelize": "^6.37.3",
     "serverless-iam-roles-per-function": "^3.2.0"
   },
   "name": "employee-portal-serverless",
