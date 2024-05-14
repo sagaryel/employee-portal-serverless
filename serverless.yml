@@ -3,7 +3,7 @@ provider:
   name: aws
   runtime: nodejs18.x
   stage: sit
-  region: ap-south-1
+  region: us-east-2
   environment:
     PG_HOST: localhost
     PG_PORT: 5432
